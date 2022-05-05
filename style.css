@@ -1,0 +1,266 @@
+/*Fonts are imported from Google Fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+
+/*For Heading use Poppins 400 and 600*/
+/*For Body use Open Sans 400*/
+
+:root {
+	--violet: hsl(257, 40%, 49%);
+	--soft-magenta: hsl(300, 69%, 71%);
+}
+/*Css reset*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Open Sans", sans-serif;
+	font-size: 0.875rem;
+	min-height: 100vh;
+	background-image: url("./images/bg-mobile.svg");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-color: var(--violet);
+}
+
+.logo-img {
+	max-width: 9rem;
+	margin: 2rem 0rem 3rem 2rem;
+}
+
+.mock {
+	max-width: 19.25rem;
+	margin: 0rem 0rem 4rem 2rem;
+}
+
+.title {
+	text-align: center;
+	font-size: 1.45rem;
+	color: rgba(255, 255, 255, 0.767);
+	font-weight: 600;
+	font-family: "Poppins", sans-serif;
+	margin: 0rem 2rem 1rem 2rem;
+}
+
+.sub {
+	font-size: 1.1rem;
+	text-align: center;
+	line-height: 2rem;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 0.692);
+	margin: 0rem 1.25rem 3rem 1.25rem;
+	font-family: "Open Sans", sans-serif;
+}
+
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: translate(30%, -40%);
+	width: 14.875rem;
+	height: 2.75rem;
+	border-radius: 4rem;
+	margin: 1.25rem 0rem;
+	font-size: 1rem;
+	font-weight: 600;
+	color: #fff;
+	background-color: #fff;
+	background-size: 200%;
+	transition: all 0.3s ease-in-out;
+}
+
+.btn a {
+	color: var(--violet);
+	padding: 0.65rem 2rem 0.65rem 2rem;
+	text-decoration: none;
+}
+
+.btn:active,
+.btn:hover {
+	background-color: var(--soft-magenta);
+}
+
+.btn a:active,
+a:hover {
+	color: #fff;
+}
+
+.social {
+	text-align: center;
+	padding-top: 4em;
+}
+
+.social-item {
+	display: inline-block;
+}
+
+.social-item ion-icon {
+	position: relative;
+	bottom: 3rem;
+	background-color: var(--violet);
+	border: 1px solid white;
+	border-radius: 50%;
+	color: white;
+	padding: 0.35em;
+	margin: 0.2em;
+}
+
+.social-item ion-icon:hover {
+	background-color: var(--violet);
+	color: var(--soft-magenta);
+	border: 1px solid var(--soft-magenta);
+}
+
+/* layout for large screens using media query */
+
+@media only screen and (min-width: 768px) {
+	.logo-img {
+		max-width: 15rem;
+		margin: 3rem 0rem 3rem 6rem;
+	}
+
+	.mock {
+		max-width: 32rem;
+		margin: 2rem 0rem 4rem 6rem;
+	}
+
+	.title {
+		text-align: center;
+		font-size: 2.25rem;
+		margin: rem 6rem 2rem 6rem;
+	}
+
+	.sub {
+		font-size: 1.25rem;
+		text-align: center;
+		margin: 0rem 4rem 3rem 4rem;
+		font-family: "Open Sans", sans-serif;
+	}
+
+	.btn {
+		transform: translate(110%, -20%);
+	}
+
+	.btn:active,
+	.btn:hover {
+		background-color: var(--soft-magenta);
+	}
+
+	.btn a:active,
+	a:hover {
+		color: #fff;
+	}
+}
+
+@media only screen and (min-width: 1440px) {
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	body {
+		background-image: url("./images/bg-desktop.svg");
+	}
+	.wrapper {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	.logo-img {
+		max-width: 20rem;
+		margin: 3rem 0rem 3rem 6rem;
+	}
+
+	.mock {
+		max-width: 36rem;
+		margin: 2rem 0rem 4rem 6rem;
+	}
+
+	.title {
+		color: rgb(255, 255, 255);
+		grid-area: text-section;
+		align-self: center;
+		text-align: left;
+		font-size: 2.18rem;
+		margin: 4rem 18rem 2rem 0rem;
+	}
+
+	.sub {
+		grid-area: text-section;
+		align-self: center;
+		text-align: left;
+		font-size: 1.03rem;
+		margin: 0rem 18rem 3rem 0rem;
+	}
+
+	.btn {
+		transform: translate(0%, -40%);
+		width: 11.575rem;
+		height: 2.75rem;
+		border-radius: 4rem;
+		margin: 1.25rem 0rem;
+		font-size: 1rem;
+	}
+
+	.social-item {
+		position: relative;
+		left: 34rem;
+		top: 7rem;
+		width: 4rem;
+	}
+	ion-icon {
+		width: 1.85rem;
+		height: 1.85rem;
+	}
+}
+
+@media only screen and (min-width: 1920px) {
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	.logo-img {
+		max-width: 25rem;
+		margin: 3rem 0rem 3rem 6rem;
+	}
+
+	.mock {
+		min-width: 47rem;
+		margin: 2rem 0rem 4rem 6rem;
+	}
+
+	.title {
+		color: rgb(255, 255, 255);
+		grid-area: text-section;
+		align-self: center;
+		text-align: left;
+		font-size: 2.68rem;
+		margin: 4rem 26.8rem 2rem -2rem;
+	}
+
+	.sub {
+		grid-area: text-section;
+		align-self: center;
+		text-align: left;
+		font-size: 1.22rem;
+		margin: 0rem 26.8rem 3rem -2rem;
+	}
+
+	.btn {
+		transform: translate(0%, -40%);
+		width: 10.575rem;
+		height: 2.95rem;
+		border-radius: 4rem;
+		margin: 1.25rem -2rem;
+		font-size: 1rem;
+	}
+
+	.social-item {
+		position: relative;
+		left: 48rem;
+		top: 1.78rem;
+		width: 4rem;
+	}
+}
